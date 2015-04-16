@@ -1,0 +1,162 @@
+[
+  {
+    "Year": 1980,
+    "Crude": 2.5,
+    "AgeAdjusted": 2.8
+  },
+  {
+    "Year": 1981,
+    "Crude": 2.5,
+    "AgeAdjusted": 2.8
+  },
+  {
+    "Year": 1982,
+    "Crude": 2.5,
+    "AgeAdjusted": 2.7
+  },
+  {
+    "Year": 1983,
+    "Crude": 2.5,
+    "AgeAdjusted": 2.8
+  },
+  {
+    "Year": 1984,
+    "Crude": 2.6,
+    "AgeAdjusted": 2.8
+  },
+  {
+    "Year": 1985,
+    "Crude": 2.7,
+    "AgeAdjusted": 2.9
+  },
+  {
+    "Year": 1986,
+    "Crude": 2.7,
+    "AgeAdjusted": 3
+  },
+  {
+    "Year": 1987,
+    "Crude": 2.7,
+    "AgeAdjusted": 2.9
+  },
+  {
+    "Year": 1988,
+    "Crude": 2.7,
+    "AgeAdjusted": 2.9
+  },
+  {
+    "Year": 1989,
+    "Crude": 2.6,
+    "AgeAdjusted": 2.8
+  },
+  {
+    "Year": 1990,
+    "Crude": 2.7,
+    "AgeAdjusted": 2.9
+  },
+  {
+    "Year": 1991,
+    "Crude": 2.8,
+    "AgeAdjusted": 3
+  },
+  {
+    "Year": 1992,
+    "Crude": 3,
+    "AgeAdjusted": 3.1
+  },
+  {
+    "Year": 1993,
+    "Crude": 3,
+    "AgeAdjusted": 3.2
+  },
+  {
+    "Year": 1994,
+    "Crude": 3.1,
+    "AgeAdjusted": 3.3
+  },
+  {
+    "Year": 1995,
+    "Crude": 3.1,
+    "AgeAdjusted": 3.3
+  },
+  {
+    "Year": 1996,
+    "Crude": 3.3,
+    "AgeAdjusted": 3.5
+  },
+  {
+    "Year": 1997,
+    "Crude": 3.5,
+    "AgeAdjusted": 3.7
+  },
+  {
+    "Year": 1998,
+    "Crude": 3.9,
+    "AgeAdjusted": 4.1
+  },
+  {
+    "Year": 1999,
+    "Crude": 4.1,
+    "AgeAdjusted": 4.2
+  },
+  {
+    "Year": 2000,
+    "Crude": 4.4,
+    "AgeAdjusted": 4.5
+  },
+  {
+    "Year": 2001,
+    "Crude": 4.7,
+    "AgeAdjusted": 4.7
+  },
+  {
+    "Year": 2002,
+    "Crude": 4.8,
+    "AgeAdjusted": 4.9
+  },
+  {
+    "Year": 2003,
+    "Crude": 5,
+    "AgeAdjusted": 5
+  },
+  {
+    "Year": 2004,
+    "Crude": 5.3,
+    "AgeAdjusted": 5.2
+  },
+  {
+    "Year": 2005,
+    "Crude": 5.6,
+    "AgeAdjusted": 5.5
+  },
+  {
+    "Year": 2006,
+    "Crude": 5.8,
+    "AgeAdjusted": 5.6
+  },
+  {
+    "Year": 2007,
+    "Crude": 6,
+    "AgeAdjusted": 5.8
+  },
+  {
+    "Year": 2008,
+    "Crude": 6.3,
+    "AgeAdjusted": 6
+  },
+  {
+    "Year": 2009,
+    "Crude": 6.7,
+    "AgeAdjusted": 6.3
+  },
+  {
+    "Year": 2010,
+    "Crude": 6.9,
+    "AgeAdjusted": 6.4
+  },
+  {
+    "Year": 2011,
+    "Crude": 6.9,
+    "AgeAdjusted": 6.4
+  }
+]

@@ -1,0 +1,466 @@
+/*
+ * Social Buttons for Bootstrap
+ *
+ * Copyright 2013-2014 Panayiotis Lipiridis
+ * Licensed under the MIT License
+ *
+ * https://github.com/lipis/bootstrap-social
+ */
+
+$bs-height-base: ($line-height-computed + $padding-base-vertical * 2);
+$bs-height-lg:   (floor($font-size-large * $line-height-base) + $padding-large-vertical * 2);
+$bs-height-sm:   (floor($font-size-small * 1.5) + $padding-small-vertical * 2);
+$bs-height-xs:   (floor($font-size-small * 1.2) + $padding-small-vertical + 1);
+
+.btn-social {
+  position: relative;
+  padding-left: ($bs-height-base + $padding-base-horizontal);
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  > :first-child {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: $bs-height-base;
+    line-height: ($bs-height-base + 2);
+    font-size: 1.6em;
+    text-align: center;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  &.btn-lg {
+    padding-left: ($bs-height-lg + $padding-large-horizontal);
+    :first-child {
+      line-height: $bs-height-lg;
+      width: $bs-height-lg;
+      font-size: 1.8em;
+    }
+  }
+  &.btn-sm {
+    padding-left: ($bs-height-sm + $padding-small-horizontal);
+    :first-child {
+      line-height: $bs-height-sm;
+      width: $bs-height-sm;
+      font-size: 1.4em;
+    }
+  }
+  &.btn-xs {
+    padding-left: ($bs-height-xs + $padding-small-horizontal);
+    :first-child {
+      line-height: $bs-height-xs;
+      width: $bs-height-xs;
+      font-size: 1.2em;
+    }
+  }
+}
+
+.btn-social-icon {
+  @extend .btn-social;
+  height: ($bs-height-base + 2);
+  width: ($bs-height-base + 2);
+  margin: 5px;
+  padding: 0;
+  :first-child {
+    border: none;
+    text-align: center;
+    width: 100%!important;
+  }
+  &.btn-lg {
+    height: $bs-height-lg;
+    width: $bs-height-lg;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  &.btn-sm {
+    height: ($bs-height-sm + 2);
+    width: ($bs-height-sm + 2);
+    padding-left: 0;
+    padding-right: 0;
+  }
+  &.btn-xs {
+    height: ($bs-height-xs + 2);
+    width: ($bs-height-xs + 2);
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@mixin btn-social($color-bg, $color: #fff) {
+  background-color: $color-bg;
+  @include button-variant($color, $color-bg, rgba(0,0,0,.2));
+}
+
+
+.btn-adn           { @include btn-social(#d87a68); }
+.btn-bitbucket     { @include btn-social(#205081); }
+.btn-dropbox       { @include btn-social(#1087dd); }
+.btn-facebook      { @include btn-social(#3b5998); }
+.btn-flickr        { @include btn-social(#ff0084); }
+.btn-foursquare    { @include btn-social(#f94877); }
+.btn-github        { @include btn-social(#444444); }
+.btn-google-plus   { @include btn-social(#dd4b39); }
+.btn-instagram     { @include btn-social(#3f729b); }
+.btn-linkedin      { @include btn-social(#007bb6); }
+.btn-microsoft     { @include btn-social(#2672ec); }
+.btn-openid        { @include btn-social(#f7931e); }
+.btn-pinterest     { @include btn-social(#cb2027); }
+.btn-reddit        { @include btn-social(#eff7ff, #000); }
+.btn-soundcloud    { @include btn-social(#ff5500); }
+.btn-tumblr        { @include btn-social(#2c4762); }
+.btn-twitter       { @include btn-social(#55acee); }
+.btn-vimeo         { @include btn-social(#1ab7ea); }
+.btn-vk            { @include btn-social(#587ea3); }
+.btn-yahoo         { @include btn-social(#720e9e); }
+
+//colors
+$color_mine_shaft_approx: #333;
+$color_havelock_blue_approx: #5b7bd5;
+$color_san_marino_approx: #4864b1;
+$color_indigo_approx: #5874c3;
+$color_azure_approx: #41599f;
+$white: #fff;
+$color_chambray_approx: #354c8c;
+$white_0: rgba(255, 255, 255, 0.04);
+$color_pink_swan_approx: #bbb;
+$color_pale_sky_approx: #6a7180;
+$black: #000;
+$color_silver_chalice_approx: #ababab;
+$color_star_dust_approx: #9a9a9a;
+$color_boulder_approx: #787878;
+$color_venice_blue_approx: #04568b;
+$color_gallery_approx: #ededed;
+$color_alto_approx: #dedede;
+$color_bahama_blue_approx: #069;
+$color_bon_jour_approx: #e2e2e2;
+$color_silver_approx: #bfbfbf;
+$color_cararra_approx: #ececec;
+$color_romance_approx: #fefefe;
+
+//fonts
+$font_0: Helvetica Neue;
+$font_1: Helvetica;
+$font_2: Arial;
+$font_3: lucida grande;
+$font_4: tahoma;
+$font_5: verdana;
+$font_6: arial;
+$font_7: sans-serif;
+
+//urls
+$url_0: url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/y5/r/KxVPs0eEy36.png);
+$url_1: url(https://www.linkedin.com/scds/common/u/images/apps/connect/sprites/sprite_connect_v14.png);
+
+//@extend-elements
+//original selectors
+//.facebookShare:hover .facebookButton .pluginButton, .facebookShare:active .facebookButton .pluginButton, .facebookShare:focus .facebookButton .pluginButton
+%extend_1 {
+  background: $color_havelock_blue_approx;
+  background: linear-gradient(to bottom, $color_havelock_blue_approx 0, $color_san_marino_approx 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_havelock_blue_approx', endcolorstr='$color_san_marino_approx', gradienttype=0);
+  border-color: $color_indigo_approx $color_san_marino_approx $color_azure_approx;
+  //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: inset 0 0 1px $color_havelock_blue_approx;
+}
+
+//original selectors
+//.facebookShare .facebookCount .pluginCountButtonNub s, .facebookShare .facebookCount .pluginCountButtonNub i
+%extend_2 {
+  border-color: transparent $color_pink_swan_approx;
+  border-style: solid;
+  border-width: 4px 5px 4px 0;
+  display: block;
+  position: relative;
+  top: 1px;
+}
+
+//original selectors
+//.linkedinShare:hover .linkedinButton .pluginButtonLabel, .linkedinShare:active .linkedinButton .pluginButtonLabel, .linkedinShare:focus .linkedinButton .pluginButtonLabel
+%extend_3 {
+  border: 1px solid $black;
+  border-top-color: $color_silver_chalice_approx;
+  border-right-color: $color_star_dust_approx;
+  border-bottom-color: $color_boulder_approx;
+  border-left-color: $color_venice_blue_approx;
+  border-left: 0;
+  background: $color_gallery_approx;
+  background: linear-gradient(to bottom, $color_gallery_approx 0, $color_alto_approx 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_gallery_approx', endcolorstr='$color_alto_approx', gradienttype=0);
+}
+
+
+.facebookShare {
+  border: none;
+  visibility: visible;
+  width: auto;
+  height: 22px;
+  background: transparent;
+  overflow: hidden;
+  color: $color_mine_shaft_approx;
+  line-height: 1.28;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  direction: ltr;
+  cursor: pointer;
+  font-family: $font_0, $font_1, $font_2, $font_3, $font_4, $font_5, $font_6, $font_7;
+  display: inline-block;
+  .facebookButton {
+    color: $color_azure_approx;
+    text-decoration: none;
+    font-size: 11px;
+    text-align: left;
+    display: inline-block;
+    width: 55px;
+    .pluginButton {
+      background: $color_indigo_approx;
+      background: linear-gradient(to bottom, $color_indigo_approx 0, $color_azure_approx 100%);
+      filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_indigo_approx', endcolorstr='$color_azure_approx', gradienttype=0);
+      border: none;
+      //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+      border-radius: 3px;
+      color: $white;
+      cursor: pointer;
+      font-weight: bold;
+      height: 20px;
+      line-height: 20px;
+      padding: 0;
+      //Instead of the line below you could use @includetext-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      text-shadow: 0 -1px 0 $color_chambray_approx;
+      white-space: nowrap;
+      .pluginButtonContainer {
+        //Instead of the line below you could use @includetext-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        text-shadow: 1px 1px 1px $white_0;
+        .pluginButtonImage {
+          display: inline-block;
+        }
+      }
+      button {
+        background: transparent;
+        border: 0;
+        color: inherit;
+        cursor: pointer;
+        font: inherit;
+        font-weight: bold;
+        margin: -1px;
+        outline: none;
+        padding: 0;
+        //Instead of the line below you could use @includetext-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        text-shadow: 0 -1px 0 $color_chambray_approx;
+        .pluginButtonIcon {
+          height: 14px;
+          left: 0;
+          margin: 0 4px;
+          position: relative;
+          top: 3px;
+          vertical-align: top;
+          width: 14px;
+        }
+        .sp_plugin-button-2x {
+          background-image: $url_0;
+          background-size: 30px 72px;
+          background-repeat: no-repeat;
+          display: inline-block;
+          height: 14px;
+          width: 14px;
+        }
+        .sx_plugin-button-2x_favblue {
+          background-position: 0 -42px;
+        }
+        i.img {
+          _overflow: hidden;
+        }
+      }
+      .pluginButtonLabel {
+        padding: 0 5px 0 0;
+        position: relative;
+        vertical-align: top;
+      }
+    }
+  }
+  .facebookCount {
+    display: inline-block;
+    width: auto;
+    .pluginCountButton {
+      background: $white;
+      border: 1px solid $color_pink_swan_approx;
+      //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+      border-radius: 3px;
+      color: $color_pale_sky_approx;
+      display: inline-block;
+      font-size: 11px;
+      height: auto;
+      line-height: 18px;
+      margin-left: 6px;
+      min-width: 15px;
+      padding: 0 3px;
+      text-align: center;
+      white-space: nowrap;
+      span {
+        display: inline-block;
+        min-height: 12px;
+        min-width: 4px;
+        color: $color_mine_shaft_approx;
+      }
+    }
+    .pluginCountButtonNub {
+      height: 0;
+      left: 2px;
+      position: relative;
+      top: -15px;
+      width: 5px;
+      z-index: 2;
+      s {
+        @extend %extend_2;
+      }
+      i {
+        @extend %extend_2;
+        border-right-color: $white;
+        left: 2px;
+        top: -7px;
+      }
+    }
+  }
+  &:hover .facebookButton .pluginButton {
+    @extend %extend_1;
+  }
+  &:active .facebookButton .pluginButton {
+    @extend %extend_1;
+  }
+  &:focus .facebookButton .pluginButton {
+    @extend %extend_1;
+  }
+}
+.linkedinShare {
+  line-height: 1;
+  vertical-align: baseline;
+  display: inline-block;
+  text-align: center;
+  width: auto;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  border: 0;
+  text-decoration: none;
+  height: 20px;
+  cursor: pointer;
+  .linkedinButton {
+    display: inline-block;
+    width: 59px;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+    .pluginButtonImage {
+      background-image: $url_1;
+      background-position: 0 -276px;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      border: 0;
+      text-indent: -9999em;
+      overflow: hidden;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      width: 20px;
+      height: 20px;
+      //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+      border-radius: 2px;
+      color: $color_bahama_blue_approx;
+    }
+    .pluginButtonLabel {
+      color: $color_mine_shaft_approx;
+      cursor: pointer;
+      display: block;
+      white-space: nowrap;
+      float: left;
+      margin-left: 1px;
+      overflow: hidden;
+      text-align: center;
+      height: 18px;
+      padding: 0 4px 0 23px;
+      border: 1px solid $black;
+      border-top-color: $color_bon_jour_approx;
+      border-right-color: $color_silver_approx;
+      border-bottom-color: $color_pink_swan_approx;
+      border-left-color: $color_bon_jour_approx;
+      border-left: 0;
+      //Instead of the line below you could use @includetext-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      text-shadow: $white -1px 1px 0;
+      line-height: 20px;
+      //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+      border-radius: 2px;
+      background-color: $color_cararra_approx;
+      background: linear-gradient(to bottom, $color_romance_approx 0, $color_cararra_approx 100%);
+      filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_romance_approx', endcolorstr='$color_cararra_approx', gradienttype=0);
+      span {
+        color: $color_mine_shaft_approx;
+        font-size: 11px;
+        font-family: $font_2, $font_7;
+        font-weight: bold;
+        font-style: normal;
+        display: inline-block;
+        background: transparent none;
+        vertical-align: top;
+        height: 18px;
+        line-height: 20px;
+        float: none;
+      }
+    }
+  }
+  .linkedinCount {
+    padding: 0;
+    margin: 0;
+    text-indent: 0;
+    display: inline-block;
+    vertical-align: baseline;
+    .pluginCountButton {
+      display: inline-block;
+      overflow: visible;
+      position: relative;
+      height: 18px;
+      padding-left: 2px;
+      .pluginCountButtonRight {
+        display: block;
+        float: left;
+        height: 18px;
+        padding-right: 4px;
+        background-image: $url_1;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: right -100px;
+        .pluginCountButtonLeft {
+          display: block;
+          float: left;
+          padding-left: 8px;
+          text-align: center;
+          background-image: $url_1;
+          background-color: transparent;
+          background-repeat: no-repeat;
+          background-position: 0 -60px;
+          span {
+            display: inline;
+            font-size: 11px;
+            color: $color_venice_blue_approx;
+            font-weight: bold;
+            font-family: $font_2, $font_7;
+            line-height: 18px;
+            padding: 0 2px;
+          }
+        }
+      }
+    }
+  }
+  &:hover .linkedinButton .pluginButtonLabel {
+    @extend %extend_3;
+  }
+  &:active .linkedinButton .pluginButtonLabel {
+    @extend %extend_3;
+  }
+  &:focus .linkedinButton .pluginButtonLabel {
+    @extend %extend_3;
+  }
+}

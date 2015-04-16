@@ -1,0 +1,27 @@
+<div class="content-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="back-menu" ng-click="drill.back()">
+          <span class="back-title"><i class="fa fa-angle-left"></i>Back</span>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="main-title">{{drill.metric.name}}</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p class="description">{{drill.metric.description}}</p>
+      </div>
+      <div ng-if="drill.metric.type === 'line'" big-chart metric="drill.metric"></div>
+      <div ng-if="drill.metric.type === 'bar'" big-bars metric="drill.metric"></div>
+      <div ng-if="drill.metric.type === 'single'" big-area metric="drill.metric"></div>
+      <div class="col-sm-6">
+         <div id="grid1" ui-grid="{ data: drill.data }" class="grid" ui-grid-auto-resize></div>
+      </div>
+    </div>
+  </div>
+</div>

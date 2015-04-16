@@ -1,0 +1,311 @@
+$icon-font-path: '../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/';
+// bower:scss
+@import 'bootstrap-sass-official/assets/stylesheets/_bootstrap.scss';
+// endbower
+
+@import 'compass/css3';
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+@import 'social';
+@import 'metricCard';
+@import 'drill';
+@import 'typeahead';
+
+// variables
+$gray: #555;
+$light-gray: #8a8d8f;
+$lighter-gray: #e5e5e5;
+$lightest-gray: #f2f2f2;
+$cdc-blue: #31689B;
+
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+  color: $gray;
+  background-color: white;
+  font-family: 'Open Sans', sans-serif;
+}
+
+*:focus {
+  outline: none;
+}
+
+// Header Sytles
+header {
+  padding: 30px;
+  background-color: #fff;
+}
+
+.logo {
+  font-size: 42px;
+  color: $cdc-blue;
+}
+
+.title {
+  display: inline-block;
+  margin-left: 15px;
+
+  .header-title {
+    font-size: 18px;
+    color: $gray;
+  }
+
+  .sub-title {
+    font-size: 10px;
+    color: $light-gray;
+    margin-bottom: 15px;
+  }
+}
+
+.header-search {
+  display: inline-block;
+  height: 48px;
+  width: 100%;
+  padding: 0 15px;
+  font-size: 14px;
+  border-radius: 24px;
+  border: 1px solid $lighter-gray;
+
+  span.fa {
+    font-size: 16px;
+    margin-top: 12px;
+    float: left;
+  }
+
+  form {
+    display: inline-block;
+  }
+
+  input {
+    font-size: 16px;
+    border: none;
+    padding: 15px;
+    height: 44px;
+    outline: none;
+    width: 90%;
+  }
+}
+
+.tagline {
+  padding: 30px 15px 0px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+// Main View Styles
+.content-wrapper {
+  background-color: $lightest-gray;
+  padding: 15px 30px;
+}
+
+.main-title {
+  font-size: 42px;
+  margin-top: 15px;
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+
+.view-container {
+  background-color: $lightest-gray;
+  position: relative;
+  min-height: 500px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+// Animations
+.slide {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  &.ng-enter, &.ng-leave {
+    transition: all 1s ease;
+  }
+
+  &.ng-enter {
+    left: -100%;
+  }
+
+  &.ng-enter-active {
+    left: 0;
+  }
+
+  &.ng-leave {
+    position: absolute;
+    left: 0;
+  }
+
+  &.ng-leave-active {
+    left: -100%;
+  }
+}
+
+.reverse {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  &.ng-enter, &.ng-leave {
+    transition: all 1s ease;
+  }
+
+  &.ng-enter {
+    left: 100%;
+  }
+
+  &.ng-enter-active {
+    left: 0;
+  }
+
+  &.ng-leave {
+    position: absolute;
+    left: 0;
+  }
+
+  &.ng-leave-active {
+    left: 100%;
+  }
+}
+
+
+// Footer Styles
+.footer {
+  background-color: #fff;
+  position: relative;
+  padding-top: 19px;
+  color: #555;
+  border-top: 1px solid $lighter-gray;
+
+  .footer-title {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .logo {
+    text-align: right;
+  }
+
+  .social-container {
+    margin-bottom: 30px;
+  }
+
+  .contact {
+    float: left;
+
+    td {
+      vertical-align: top;
+      padding: 10px;
+    }
+  }
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+// Quiz Section
+.extra {
+  background-color: #90c4e4;
+  width: 100%;
+  color: #fff;
+  padding: 60px;
+
+  .title {
+    font-size: 42px;
+    margin: 0 0 15px 0;
+    font-weight: 300;
+  }
+
+  .poster {
+    filter: none;
+
+    &:hover {
+      filter: grayscale(100%);
+    }
+  }
+
+  .text {
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .btn-primary {
+    border: none;
+    background-color: #FB8D34;
+  }
+}
+
+// Custom Search Box
+#custom-search-input {
+  padding: 3px;
+  border: solid 1px #e4e4e4;
+  border-radius: 6px;
+  background-color: #fff;
+  input {
+    border: 0;
+    box-shadow: none;
+  }
+  button {
+    margin: 2px 0 0;
+    background: none;
+    box-shadow: none;
+    border: 0;
+    color: #666666;
+    padding: 0 8px 0 10px;
+    border-left: solid 1px #ccc;
+    &:hover {
+      border: 0;
+      box-shadow: none;
+      border-left: solid 1px #ccc;
+    }
+  }
+  .glyphicon-search {
+    font-size: 23px;
+  }
+}
+
+/* Responsive: Portrait tablets and down */
+@media screen and (max-width: 991px) {
+  .table-responsive {
+    border: none;
+  }
+  .footer-title {
+    margin-top: 15px;
+  }
+  .logo {
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+  .extra .poster {
+    padding-top: 30px;
+  }
+  .title {
+    display: block;
+    margin: auto;
+    .header-title {
+      text-align: center;
+      font-size: 20px;
+      color: $gray;
+    }
+    .sub-title {
+      text-align: center;
+      font-size: 10px;
+      color: $light-gray;
+    }
+  }
+}

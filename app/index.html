@@ -1,0 +1,152 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-ui-grid/ui-grid.css" />
+    <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="cdcApp">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <header class="header" ng-controller="HeaderCtrl">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8">
+            <span class="logo">CDC</span>
+            <div class="title">
+              <div class="header-title">Centers for Disese Control and Prevention</div>
+              <div class="sub-title">CDC 24/7: Saving Lives, Protecting People</div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div id="custom-search-input">
+                <div class="input-group">
+                    <input type="text" id="query" ng-model="query" class="form-control input-lg" placeholder="Search" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-info btn-lg" ng-click="search()" type="button">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="row">
+        <div class="col-md-12 clearfix">
+          <div class="tagline">Diabetes Public Health Resource</div>
+        </div>
+      </div> -->
+    </header>
+
+    <div class="view-container">
+      <div ui-view="" ng-class="{slide: direction === 'left', reverse: direction === 'right'}"></div>
+    </div>
+
+    <footer class="footer" ng-controller="FooterCtrl">
+      <div class="container">
+        <div class="row">
+          <!-- <div class="col-sm-4">
+            <div class="footer-title">Related Links</div>
+            <ul class="link-list">
+              <li ng-repeat="link in links" class="link-item">  <a ng-href="{{link.href}}">{{link.name}}</a>
+              </li>
+            </ul>
+          </div> -->
+          <div class="col-md-4 clearfix">
+            <div class="footer-title">Contact Us by Mail</div>
+            <div class="contact">
+              <span>Centers for Disease Control and Prevention</span><br />
+              <span>1600 Clifton Rd</span><br />
+              <span>Atlanta, GA 3033</span>
+            </div>
+          </div>
+          <div class="col-md-4 clearfix">
+            <div class="footer-title">Contact Us by Phone</div>
+              <div class="contact">
+                <span>800-CDC-INFO</span><br />
+                <span>(800-232-4636)</span><br />
+                <span>TTY: (888) 232-6348</span>
+              </div>
+          </div>
+          <div class="col-md-4 clearfix">
+            <div class="footer-title clearfix">Social</div>
+            <div class="clearfix"></div>
+            <a class="btn btn-social-icon btn-{{item.name}}" ng-repeat="item in social" ng-href="item.href">
+              <i class="fa fa-{{item.name}}"></i>
+            </a>
+            <div class="social-container clearfix"></div>
+          </div>
+          <!-- <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="footer-title">Learn More</div>
+            <img class="img-responsive" src="//placehold.it/800x600" />
+          </div> -->
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/d3/d3.js"></script>
+    <script src="bower_components/lodash/lodash.js"></script>
+    <script src="bower_components/angular-ui-grid/ui-grid.js"></script>
+    <script src="bower_components/typeahead.js/dist/typeahead.bundle.js"></script>
+    <script src="bower_components/wow/dist/wow.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/directives/singlelinecard.js"></script>
+        <script src="scripts/directives/multilinecard.js"></script>
+        <script src="scripts/directives/groupedBarCard.js"></script>
+        <script src="scripts/controllers/footer.js"></script>
+        <script src="scripts/controllers/drill.js"></script>
+        <script src="scripts/directives/bigchart.js"></script>
+        <script src="scripts/directives/bigbars.js"></script>
+        <script src="scripts/directives/bigarea.js"></script>
+        <script src="scripts/services/hover.js"></script>
+        <script src="scripts/services/cdcdata.js"></script>
+        <script src="scripts/controllers/header.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
